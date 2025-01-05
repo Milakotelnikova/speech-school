@@ -89,8 +89,11 @@
               <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
             </div>
           </div>
+          <label>
+            <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+        </label>
           <div class="form__section form__section--submit form__section--bottom-gutter-lg">
-            <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+            <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" id="mc-embedded-subscribe" />
           </div>
         </form>
       </div>

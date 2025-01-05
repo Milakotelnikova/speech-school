@@ -15,6 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <body>
     <header class="header lock-padding">
   <div class="header__inner">
@@ -266,125 +268,51 @@
           </div>
         </div>
       </section>
-      <!-- Trial-lesson -->
-      <div class="page__item">
-        <div class="container container--filled-block">
-          <div class="trial-lesson">
-            <div class="trial-lesson__content">
-              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
-              <form class="trial-lesson__form form" data-form="trial-form">
-                <div class="form__section form__section--bottom-gutter-lg">
-                  <div class="form__group form__group--col-2">
-                    <div class="tab-label form__item">
-                      <label class="tab-label__label">
-                        <span class="tab-label__text">Взрослые</span>
-                        <input
-                          class="tab-label__input visible-hidden"
-                          name="for-whom"
-                          type="radio"
-                          data-state-fields="hide"
-                          checked
-                        />
-                        <span class="tab-label__underline"></span>
-                      </label>
-                    </div>
-                    <div class="tab-label form__item">
-                      <label class="tab-label__label">
-                        <span class="tab-label__text">Дети</span>
-                        <input
-                          class="tab-label__input visible-hidden"
-                          name="for-whom"
-                          type="radio"
-                          data-state-fields="show"
-                        />
-                        <span class="tab-label__underline"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__section form__section--select-language">
-                  <div class="form__item form__item--select">
-                    <select class="field" id="lang">
-                      <option selected>Английский язык</option>
-                      <option value="1">Французский язык</option>
-                      <option value="2">Немецкий язык</option>
-                      <option value="3">Испанский язык</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__section form__section--education-place">
-                  <div class="form__group form__group--col-2">
-                    <div class="form__item">
-                      <input
-                        class="radio-button"
-                        name="where-study"
-                        id="school"
-                        type="radio"
-                        checked
-                      />
-                      <label class="label" for="school">Занятия в клубе</label>
-                    </div>
-                    <div class="form__item">
-                      <input class="radio-button" name="where-study" id="online" type="radio" />
-                      <label class="label" for="online">Онлайн-занятия</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__section form__section--student-info">
-                  <div class="form__group form__group--col-2">
-                    <div class="form__item">
-                      <input
-                        class="field field--text"
-                        type="text"
-                        placeholder="Ваше имя"
-                        value=""
-                      />
-                    </div>
-                    <div class="form__item">
-                      <input
-                        class="field field--text"
-                        type="tel"
-                        placeholder="Ваш телефон"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                  <div class="form__group form__group--col-2 form__group--additional hide">
-                    <div class="form__item">
-                      <input
-                        class="field field--text"
-                        type="text"
-                        placeholder="Имя ребенка"
-                        value=""
-                      />
-                    </div>
-                    <div class="form__item">
-                      <input
-                        class="field field--text"
-                        type="text"
-                        placeholder="Возраст ребенка"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                  <div class="form__group">
-                    <div class="form__item"></div>
-                    <input
-                      class="field field--text"
-                      type="email"
-                      placeholder="Ваша почта"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div class="form__section form__section--submit form__section--bottom-gutter-lg">
-                  <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+
+   <!-- Teachers -->
+   <div class="wrapper">
+    <h3 class="benefits__heading"><span>Команда нашей школы</span></h3>
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel">
+      <li class="card">
+        <div class="img"><img src="img/teachers/teacher1.png" alt="img" draggable="false"></div>
+        <h2>Эсмира</h2>
+        <span>🇹🇷Преподаватель турецкого</span>
+        <span>Стаж 5 лет</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="img/teachers/teacher2.png" alt="img" draggable="false"></div>
+        <h2>Зоя</h2>
+        <span>🇨🇳Преподаватель китайского</span>
+        <span>Стаж 5 лет</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="img/teachers/teacher3.png" alt="img" draggable="false"></div>
+        <h2>Мила</h2>
+        <span>🇺🇸Преподаватель английского</span>
+        <span>Стаж 5 лет</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="img/teachers/teacher4.png" alt="img" draggable="false"></div>
+        <h2>Ислам</h2>
+        <span>🇹🇷Преподаватель турецкого</span>
+        <span>Носитель языка</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="img/teachers/teacher7.png" alt="img" draggable="false"></div>
+        <h2>Даниель</h2>
+        <span>🇪🇸Преподаватель испанского</span>
+        <span>Носитель языка</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+        <h2>Рима</h2>
+        <span>🇸🇦Преподаватель арабского</span>
+        <span>Носитель языка</span>
+      </li>
+    </ul>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
       <!-- For-clients -->
       <section class="for-clients page__item">
         <div class="for-clients__item container">
@@ -621,6 +549,8 @@
           </div>
         </div>
       </section>
+
+      
       <!-- Trial-lesson -->
       <div class="page__item">
         <div class="container container--filled-block">
@@ -731,6 +661,9 @@
                       value=""
                     />
                   </div>
+                  <label>
+                    <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+                </label>
                 </div>
                 <div class="form__section form__section--submit form__section--bottom-gutter-lg">
                   <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" />
@@ -931,7 +864,7 @@
           <a href="tel:+79508500993" class="footer__link">+7 (950) 850-09-93</a>
         </li>
         <li class="footer__list-item">
-          <a href="mailto:info@speaky.school" class="footer__link">info@speech.school</a>
+          <a href="mailto:speech-school@yandex.ru" class="footer__link">speech-school@yandex.ru</a>
         </li>
         <li class="footer__list-item">
           344000, Россия,
@@ -1035,8 +968,11 @@
               <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
             </div>
           </div>
+          <label>
+            <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+        </label>
           <div class="form__section form__section--submit form__section--bottom-gutter-lg">
-            <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+            <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" id="mc-embedded-subscribe" />
           </div>
         </form>
       </div>
