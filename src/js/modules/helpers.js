@@ -65,10 +65,20 @@ const helpers = {
     mailForms.forEach((form, idx) => {
       const hideTab = form.querySelector(`[data-${buttonStateAttribute}=${closeButtonName}]`);
       const showTab = form.querySelector(`[data-${buttonStateAttribute}=${openButtonName}]`);
+      const submitBtn = form.querySelector('.btn')
 
       /* Накидываю хэш на инпуты, если вдруг ID и name аттрибуты одинаковые будут в разных формах */
       /* Берем все инпуты в форме */
       const inputs = form.querySelectorAll('input');
+
+      // эмуляция отправки формы и очистка полей
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        inputs.forEach(input => {
+          if (input.type === 'text' || input.type === 'email' || input.type === 'tel') input.value = ''
+        })
+      }
+      submitBtn.addEventListener('click', handleSubmit)
 
       /* Фильтруем по наличию ID */
       let targetInputs = Array.from(inputs).filter((el) => el.id);
@@ -182,6 +192,40 @@ const helpers = {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
   },
+
+  // initMailForms: (options = {}) => {
+  //   const {form = null, btnSubmit = null, tabClass = null} = options
+  //   let isChecked = true;
+  //   const tabs = form.querySelectorAll(tabClass)
+  //   const childInfo = form.querySelector('.form__group--additional')
+
+  //   const togglerClick = (e) => {
+  //     const isAdult = e.currentTarget.dataset.tab === 'adult'
+  //     if (isAdult && childInfo) return childInfo.classList.add('hide')
+  //   }
+  //   const handleClick = (e) => {
+  //     e.preventDefault();
+  //     const inputs = Array.from(form.querySelectorAll('input'))
+  //     isChecked = inputs.forEach(input => {
+  //       if (input.type === 'checkbox') {
+  //         if (!input.checked) return isChecked = false
+  //       } else {
+  //         console.log(input.value.length);
+  //         if (input.value.length) return isChecked = false
+  //       }
+  //     })
+      
+  //     if (isChecked) return alert('Форма успешна отправлена')
+  //     alert('Проверьте правильность формы')
+  //   }
+
+  //   if (form && btnSubmit) {
+  //     btnSubmit.addEventListener('click', handleClick)
+  //   }
+  //   if (tabs) {
+  //     tabs.forEach(tab => tab.addEventListener('click', togglerClick))
+  //   }
+  // }
 };
 
 export const toggleClass = helpers.toggleClass;
