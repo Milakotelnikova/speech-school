@@ -2,7 +2,7 @@
 @import 'vars';
 
 /* Fonts */
-// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap&subset=cyrillic-ext');
 @import 'fonts';
 
 /* Icon font */
@@ -34,11 +34,11 @@ body {
   color: $mainColor;
 }
 
-// .wrapper {
-//   width: 100%;
-//   min-height: 100%;
-//   overflow: hidden;
-// }
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
 
 .container {
   --container-gutter: 20px;
@@ -88,10 +88,13 @@ body {
 @import 'sections/section_features';
 @import 'sections/section_offer-text';
 @import 'sections/section_privacy';
+@import 'sections/section_course';
 
 /* Pages */
 @import 'index';
 @import 'for-adults';
+
+
 
 /* Page */
 .page {

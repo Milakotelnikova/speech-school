@@ -159,7 +159,7 @@
   border-radius: 8px;
 }
 .carousel .card .img {
-  background: #A85BF9;
+  // background: #A85BF9;
   height: 148px;
   width: 148px;
   border-radius: 50%;
@@ -169,7 +169,7 @@
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
+  border: 4px solid #ffeca0;
 }
 .carousel .card h2 {
   font-weight: 500;
@@ -190,7 +190,7 @@
 .carousel .swiper__button {
   border-radius: 100%;
   background-color: #fff;
-  box-shadow: 8px 8px 8px 0px rgba(66, 68, 90, 1);
+  // box-shadow: 8px 8px 8px 0px rgba(66, 68, 90, 1);
   width: 24px;
   height: 24px;
   display: flex;
@@ -614,6 +614,97 @@
     @include heading-v3;
   }
 }
+
+//Feedback
+.feedback {
+  &__heading {
+    @include heading-v1;
+    @include text-gradient;
+    margin-bottom: 30px;
+
+    & span {
+      background-image: linear-gradient(to top, #ffeca0 60%, rgba(0, 0, 0, 0) 50%);
+    }
+  }
+
+  &__slider {
+    &-card {
+      padding: 20px 15px;
+      border-radius: 20px;
+      border: 1px solid #A856F6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 145px;
+    }
+    
+    &-headling {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+      & img {
+        flex-shrink: 0;
+        max-width: 100px;
+      }
+      
+      & h3 {
+        font-size: 1.56rem;
+        line-height: 120%;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      
+      & p {
+        font-size: 1.3rem;
+        line-height: 120%;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      & img {
+        flex-shrink: 0;
+        max-width: 16px;
+        max-height: 16px;
+      }
+    }
+
+    & p {
+      font-size: 1.0rem;
+      line-height: 100%;
+    }
+    
+    .swiper__btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+    
+    .swiper__button {
+      border-radius: 100%;
+      background-color: #fff;
+      // box-shadow: 8px 8px 8px 0px rgba(66, 68, 90, 1);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-next {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}
+
 //History
 .history {
   // .history__content

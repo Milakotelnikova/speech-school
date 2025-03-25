@@ -16,10 +16,18 @@
   cursor: pointer;
   &--size-normal {
     padding: 1.0625em 2.125em;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     @media (min-width: $md1) {
       font-size: 18px;
+    }
+  }
+  &--size-small {
+    padding: 1.0625em 2.125em;
+    font-size: 14px;
+    font-weight: 600;
+    @media (min-width: $md1) {
+      font-size: 14px;
     }
   }
   &--purple {

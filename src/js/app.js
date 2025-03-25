@@ -243,4 +243,75 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   })
+
+  // Slider feedback
+  initSwiperSliders('.feedback__slider .swiper', {
+    spaceBetween: 32,
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.feedback__slider .swiper-button-next',
+      prevEl: '.feedback__slider .swiper-button-prev',
+    },
+    breakpoints: {
+      440: {
+        slidesPerView: 1.5,
+        spaceBetween: 12,
+      },
+      500: {
+        slidesPerView: 1.7,
+      },
+      576: {
+        slidesPerView: 1.8,
+      },
+      620: {
+        slidesPerView: 2,
+      },
+      680: {
+        slidesPerView: 2.3,
+      },
+      768: {
+        slidesPerView: 2.5,
+      },
+      850: {
+        slidesPerView: 2.7,
+      },
+      992: {
+        slidesPerView: 2.6,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1300: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+    },
+  })
+});
+
+
+// расписание занятий
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.tab');
+  
+  tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+          // Удаляем активный класс у всех табов
+          tabs.forEach(t => t.classList.remove('active'));
+          
+          // Добавляем активный класс текущему табу
+          tab.classList.add('active');
+          
+          // Скрываем все контенты
+          document.querySelectorAll('.tab-content').forEach(content => {
+              content.classList.remove('active');
+          });
+          
+          // Показываем нужный контент
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+      });
+  });
 });
